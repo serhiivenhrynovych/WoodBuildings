@@ -10,10 +10,13 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-<h1>hello builders</h1>
-<br>
+<div class="header-wrapper">
+
+</div>
+<div class="main-wrapper">
 ${sproduct}
 <c:forEach items="${woodenProductsList}" var="woodenProduct">
     <div class="product">
@@ -28,9 +31,11 @@ ${sproduct}
             <a href="woodenProduct-${woodenProduct.id}">show details</a>
             <a href="del">del</a>
         </div>
-
     </div>
-
 </c:forEach>
+</div>
+<div class="footer-wrapper">
+
+</div>
 </body>
 </html>

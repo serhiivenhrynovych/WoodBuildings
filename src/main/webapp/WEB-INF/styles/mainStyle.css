@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+}
+.main-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.main-blocks{
+    width: 100%;
+    display: inline-block;
+}
+.col-6{
+    background-color: #fff;
+    box-sizing: border-box;
+    width: 50%;
+    display: inline-block;
+    float: left;
+}
+.main-menu-block{
+    margin: 20px 35px;
+    background-color: #08734e;
+    position: relative;
+    opacity: 0.7;
+    padding: 5% 0;
+}
+.main-menu-block:hover{
+    opacity: 1;
+    transform: scale(1.05);
+}
+.col-6-img{
+    max-width: 100%;
+}
+
+.center {
+    position: absolute;
+    left: 0;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    font-size: 34px;
+    color: white;
+}

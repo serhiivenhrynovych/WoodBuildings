@@ -36,7 +36,12 @@ public class MainController {
     @Autowired
     private BuildTypeService buildTypeService;
 
-    @GetMapping({"/", "/index"})
+    @GetMapping({"/", "/main"})
+    public String main(){
+        return "main";
+    }
+
+    @GetMapping({"/index"})
     public String index(Model model, Principal principal){
         List<WoodenProduct> all = woodenProductService.findAllWoodenProductsWith();
         model.addAttribute("woodenProductsList", all);
