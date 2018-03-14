@@ -17,7 +17,7 @@
 </head>
 <body>
 <div class="wrapper">
-    <%@include file="head1.jsp" %>
+    <%@include file="head.jsp" %>
     <div class="main-before-slider">
 
     </div>
