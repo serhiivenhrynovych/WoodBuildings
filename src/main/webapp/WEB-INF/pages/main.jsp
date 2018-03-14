@@ -10,13 +10,17 @@
 <head>
     <title>Title</title>
     <link rel="stylesheet" href="/css/mainStyle.css">
+    <link rel="stylesheet" href="/css/sliderStyle.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
 
 </head>
 <body>
 <div class="wrapper">
-    <%@include file="head.jsp" %>
+    <%@include file="head1.jsp" %>
+    <div class="main-before-slider">
+
+    </div>
     <div class="main-wrapper">
         <div class="slyder-wrapper">
             <%@include file="slyder.jsp" %>
@@ -26,7 +30,8 @@
                 Вітаємо вас на сайті компанії "ZhyVen"!
             </div>
             <div class="main-subtitle">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad blanditiis cum est eveniet, harum molestias neque officia possimus quia tenetur. Aliquam beatae dolores eligendi est fugit illo nisi quis tempore?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi consequatur, ducimus earum ipsum itaque laudantium magni nihil perspiciatis possimus praesentium quas quis saepe sapiente sint sit voluptate voluptates voluptatum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at atque cumque eaque est et fugit laboriosam libero, neque nisi quasi, quis sit sunt. Aliquid dolores fuga modi numquam voluptates? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dolore, esse eveniet explicabo fuga incidunt ipsam iure nobis odio officia quasi quo reiciendis soluta tempora, unde. Fugiat nostrum rerum sed?
+                Наша фірма надає послуги по проектуванню та оперативному будівництву дерев'яних будинків, саун та альтанок з квадратного та оциліндрованого брусу високої якості. Будівництво з брусу гарантує екологічну безпеку і беззаперечний домашній комфорт, відповідає високим вимогам щодо зміцнення здоров'я та має гарні теплоізоляційні властивості. Саме в такому будинку тепло взимку та прохолодно влітку. Також перевагами будівництва дерев'яних будинків з брусу є швидкий термін побудови, надійність, довговічність та естетична привабливість.
+                <br>Користуючись послугами компанії "ZhyVen", у Вас є можливість вибрати вже готовий проект дерев'яного будинку або створити персональний проект з допомогою професіоналів нашої команди. Найкращі архітектори з великим досвідом роботи в своїй галузі допоможуть Вам створити дім Вашої мрії. У нас на сайті ви можете підібрати план і вид майбутньог будинку.
             </div>
         </div>
         <div class="main-blocks">

@@ -156,11 +156,17 @@ header{
 }
  .main-title{
      text-align: center;
-     font-size: 24px;
+     font-size: 28px;
      margin: 10px;
  }
  .main-subtitle{
-     font-size: 18px;
+     font-size: 20px;
+     text-align: center;
+ }
+
+ .main-before-slider{
+     height: 65px;
+     background-color: #08734e;
  }
 
 
