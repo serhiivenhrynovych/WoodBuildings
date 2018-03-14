@@ -9,18 +9,30 @@ body{
     width: 100%;
     display: inline-block;
 }
-.col-6{
+.col-4{
     background-color: #fff;
     box-sizing: border-box;
-    width: 50%;
+    width: 33.3333333%;
     display: inline-block;
     float: left;
 }
+.right-pad{
+    box-sizing: border-box;
+    padding-right: 10px;
+}
+.right-left-pad{
+    box-sizing: border-box;
+    padding: 0 5px;
+}
+.left-pad{
+    box-sizing: border-box;
+    padding-left: 10px;
+}
 .main-menu-block{
-    margin: 20px 35px;
-    background-color: #08734e;
+    margin: 10px 0;
+    background-color: #373b3a;
     position: relative;
-    opacity: 0.7;
+    opacity: 0.8;
     padding: 5% 0;
 }
 .main-menu-block:hover{
@@ -39,4 +51,123 @@ body{
     text-align: center;
     font-size: 34px;
     color: white;
+}
+
+
+
+
+body{
+    margin: 0 auto;
+    font-family: Roboto,sans-serif;
+    box-sizing: border-box;
+}
+
+.wrapper{
+
+    min-height: 320vh;
+    min-width: 320px;
+    width: 100%;
+    font-size: 15px;
+    background: #fff;
+
+}
+header{
+    margin: 0 auto;
+    width: 1920px;
+    max-width: 100%;
+    background-color:#373b3a;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+.header-wrapp{
+    display: flex;
+}
+.container{
+    width: 100%;
+    max-width: 1000px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+.header-left{
+    float: left;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+
+}
+.header-logo{
+    position: relative;
+    z-index: 1;
+}
+.header-logo a{
+    margin: 10px 10px  10px 10px;
+    width: 283px;
+    height: 154px;
+    display: block;
+    text-decoration: none;
+
+}
+.header-logo a img{
+    width: 100%;
+    display: inline-block;
+}
+.header-top{
+    display:flex;
+    margin-right: 30px;
+    padding-top: 17px;
+    padding-bottom: 13px;
+}
+.header-top a{
+    color: #08734e;
+    font-size:15px;
+    text-align:right;
+    text-decoration:none;
+    display: inline-block;
+}
+.header-tel a{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.header-language a{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color:#595959;
+    border-bottom: 2px solid;
+}
+
+.header-top ul{
+    list-style-type:none;
+}
+
+.header-bot li{
+    float: left;
+    list-style-type:none;
+    padding-right: 15px;
+    text-align: right;
+}
+.fixed{
+    position: fixed;
+}
+.main-text1{
+    margin: 50px 20px;
+}
+ .main-title{
+     text-align: center;
+     font-size: 24px;
+     margin: 10px;
+ }
+ .main-subtitle{
+     font-size: 18px;
+ }
+
+
+
+
+@media only screen and (max-width: 724px) {
+    [class*="col-"] {
+        width: 100%;
+    }
 }
