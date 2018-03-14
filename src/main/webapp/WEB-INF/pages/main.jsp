@@ -11,6 +11,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="/css/mainStyle.css">
     <link rel="stylesheet" href="/css/sliderStyle.css">
+    <link rel="stylesheet" href="/css/headStyle.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
 
