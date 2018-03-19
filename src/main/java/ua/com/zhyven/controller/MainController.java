@@ -37,7 +37,17 @@ public class MainController {
     private BuildTypeService buildTypeService;
 
     @GetMapping({"/", "/main"})
-    public String main(){
+    public String main(Model model, Principal principal){
+        List<WoodenProduct> all = woodenProductService.findAllWoodenProductsWith();
+        model.addAttribute("woodenProductsList", all);
+        model.addAttribute("buildMaterialsList", buildMaterialService.findAll());
+        model.addAttribute("buildPricesList", buildPriceService.findAll());
+        model.addAttribute("buildSquaresList", buildSquareService.findAll());
+        model.addAttribute("buildStoreysList", buildStoreyService.findAll());
+        model.addAttribute("buildStylesList", buildStyleService.findAll());
+        model.addAttribute("buildTypesList", buildTypeService.findAll());
+        model.addAttribute("user", principal != null?principal.getName():"");
+
         return "main";
     }
 
@@ -75,6 +85,8 @@ public class MainController {
     public String adminPage(ModelMap modelm, Principal principal, Model model){
         modelm.addAttribute("principal", principal);
         modelm.addAttribute("user", getPrincipal());
+        List<WoodenProduct> all = woodenProductService.findAllWoodenProductsWith();
+        model.addAttribute("woodenProductsList", all);
         model.addAttribute("buildMaterialsList", buildMaterialService.findAll());
         model.addAttribute("buildPricesList", buildPriceService.findAll());
         model.addAttribute("buildSquaresList", buildSquareService.findAll());

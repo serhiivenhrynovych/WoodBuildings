@@ -72,6 +72,7 @@ public class WoodenProductController {
                 buildType1, buildMaterial1, buildSquare1, buildStorey1, buildStyle1, buildPrice1);
         System.out.println(woodenProduct);
         woodenProductService.save(woodenProduct);
+        System.out.println("hello fucker3");
 
         return "redirect:/admin";
     }
@@ -79,9 +80,12 @@ public class WoodenProductController {
     @PostMapping("removeWoodenProduct")
     public String removeWoodenProduct(@RequestParam int id) {
         WoodenProduct byId = woodenProductService.findOne(id);
+        System.out.println("hello fucker1");
         woodenProductService.remove(byId);
+        System.out.println("hello fucker2");
         return "redirect:/admin";
     }
+
 //
 //    @GetMapping("/woodenProduct-{id}")
 //    public String showWoodenProduct(Model model, @PathVariable int id) {

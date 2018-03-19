@@ -57,6 +57,18 @@
            name="${_csrf.parameterName}"
            value="${_csrf.token}"/>
 </form>
+<h3>Delete wooden product by name</h3>
+<form action="removeWoodenProduct" method="post">
+    <select name="id" id="">
+        <c:forEach items="${woodenProductsList}" var="woodenProduct">
+            <option value="${woodenProduct.id}">${woodenProduct.id}</option>
+        </c:forEach>
+        <input type="submit">
+        <input type="hidden"
+               name="${_csrf.parameterName}"
+               value="${_csrf.token}"/>
+    </select>
+</form>
 <h3>Save new Build Material</h3>
 <form action="saveBuildMaterial" method="post">
     <input type="text" name="materialType" placeholder="material type">
