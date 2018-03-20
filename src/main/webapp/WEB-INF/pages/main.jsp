@@ -101,6 +101,7 @@
                 </c:forEach>
             </a>
         </main>
+
         <div class="centr-pagination">
             <div class="pagination">
                 <a href="#">&laquo;</a>
