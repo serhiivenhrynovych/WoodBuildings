@@ -80,40 +80,91 @@
         </div>
         <div class="before-main-title">
             <h4>Проекти дерев’яних будинків з брусу</h4>
-            Ескізи будівель, представлені на сайті є типовими. В кожному конкретному випадку, відбувається адаптація проекту бані чи котеджу до вимог замовника. Корегуються зовнішні параметри зрубу, розміри кімнат, розміщення віконних та дверних блоків, кольорові поєднання елементів фасадів, тощо.
+            Ескізи будівель, представлені на сайті є типовими. В кожному конкретному випадку, відбувається адаптація
+            проекту бані чи котеджу до вимог замовника. Корегуються зовнішні параметри зрубу, розміри кімнат, розміщення
+            віконних та дверних блоків, кольорові поєднання елементів фасадів, тощо.
         </div>
         <main class="main">
             <a href="">
-                ${sproduct}
-                <c:forEach items="${woodenProductsList}" var="woodenProduct">
-                    <div class="col-6">
-                        <div class="product main-border">
-                            <img class="col-6-img" src="${woodenProduct.image}" alt="img">
+                <div class="paginator">
 
-                            <div class="main-build-name">
-                                    ${woodenProduct.buildName}
-                            </div>
-                            <div class="main-price">
-                                $${woodenProduct.buildPrice.priceSum}
+                    ${sproduct}
+                    <c:forEach items="${woodenProductsList}" var="woodenProduct">
+                        <div class="col-6">
+                            <div class="product main-border">
+                                <img class="col-6-img" src="${woodenProduct.image}" alt="img">
+
+                                <div class="main-build-name">
+                                        ${woodenProduct.buildName}
+                                </div>
+                                <div class="main-price">
+                                    $${woodenProduct.buildPrice.priceSum}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </c:forEach>
+                    </c:forEach>
+                </div>
+
             </a>
         </main>
 
-        <div class="centr-pagination">
-            <div class="pagination">
-                <a href="#">&laquo;</a>
-                <a href="#">1</a>
-                <a href="#" class="active">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">6</a>
-                <a href="#">&raquo;</a>
-            </div>
-        </div>
+        <script>
+            var paginator_selector = '.paginator';
+            var paginator_selector = (!paginator_selector) ? '.paginator' : paginator_selector;
+
+            // Items Per Page
+            var items_per_page = 8;
+
+            // Item Selector - Optional. Default: *
+            var item_selector = '*';
+            var item_selector = (!item_selector) ? '*' : item_selector;
+
+            // Define Pages
+            var pages = $(paginator_selector + " > " + item_selector);
+
+            // FUNCTION
+            // Wrap items in Pages
+            for (var i = 0; i < pages.length; i += items_per_page) {
+                pages.slice(i, i + items_per_page).wrapAll("<div class='page'></div>");
+            }
+
+            // Add Page Control Class
+            $(paginator_selector + " > " + item_selector).addClass('page_control');
+
+            // Add Paginator Control Class
+            $(paginator_selector).addClass('paginator_control');
+
+            // Create Navigation Container
+            $(paginator_selector).after('<div class="page-nav"></div>');
+
+            // Create Navigation
+            $('.page_control').each(function () {
+                $(".page-nav").append('<a href="#" data-target="' + $(this).index() + '">' + $(this).index() + '</a>');
+            });
+
+            // Activate first page
+            $(paginator_selector + " > " + item_selector + ":first-child").addClass('active5');
+
+            // Activate first Nav item
+            $('.page-nav a:first-child').addClass('active5');
+
+            // Navigation Function
+            $(".page-nav a").on("click", function () {
+
+                var targetPage = $('.page_control:eq(' + $(this).data('target') + ')'),
+                    targetPageHeight = targetPage.height(),
+                    activePage = $('.page_control.active5');
+
+                $(".page-nav a").removeClass('active5');
+                $(this).addClass('active5');
+                $('.paginator_control').animate({height: targetPageHeight}, 350, function () {
+                    $('.paginator_control').css({height: 'auto'});
+                });
+                $('.page_control').removeClass('active5');
+                targetPage.addClass('active5');
+            });
+
+        </script>
 
     </div>
     <%@include file="footer.jsp" %>
