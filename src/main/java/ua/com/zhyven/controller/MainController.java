@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import ua.com.zhyven.entity.WoodenProduct;
@@ -95,6 +96,21 @@ public class MainController {
         model.addAttribute("buildTypesList", buildTypeService.findAll());
         return "admin";
     }
+
+//    @GetMapping("woodenProduct{id}")
+//    public String singleUser(@PathVariable("id") int id, Model model, Principal principal){
+////        WoodenProduct woodenProduct = woodenProductService.findOne(id);
+//        List<WoodenProduct> all = woodenProductService.findAllWoodenProductsWith();
+//        model.addAttribute("woodenProductsList", all);
+//        model.addAttribute("buildMaterialsList", buildMaterialService.findAll());
+//        model.addAttribute("buildPricesList", buildPriceService.findAll());
+//        model.addAttribute("buildSquaresList", buildSquareService.findAll());
+//        model.addAttribute("buildStoreysList", buildStoreyService.findAll());
+//        model.addAttribute("buildStylesList", buildStyleService.findAll());
+//        model.addAttribute("buildTypesList", buildTypeService.findAll());
+//        model.addAttribute("user", principal != null?principal.getName():"");
+//        return "woodenProductPage";
+//    }
 
     private String getPrincipal(){
         String userName = null;

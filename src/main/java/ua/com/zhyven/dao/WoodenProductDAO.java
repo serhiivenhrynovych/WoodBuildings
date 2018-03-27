@@ -14,6 +14,6 @@ public interface WoodenProductDAO extends JpaRepository<WoodenProduct, Integer> 
     @Query("from WoodenProduct wp join fetch wp.buildMaterial join fetch wp.buildPrice join fetch wp.buildSquare join fetch wp.buildStorey join fetch wp.buildStyle join fetch wp.buildType")
     List<WoodenProduct> findAllWoodenProductsWith();
 
-    @Query("from WoodenProduct wp join fetch wp.images")
-    List<WoodenProduct> findProductWithImages();
+    @Query("from WoodenProduct wp join fetch wp.images where wp.id=:id")
+    List<WoodenProduct> findProductWithImages(@Param("id")int id);
 }

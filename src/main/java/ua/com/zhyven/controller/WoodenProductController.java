@@ -86,14 +86,16 @@ public class WoodenProductController {
         return "redirect:/admin";
     }
 
-//
-//    @GetMapping("/woodenProduct-{id}")
-//    public String showWoodenProduct(Model model, @PathVariable int id) {
-//        WoodenProduct one = woodenProductService.findOne(id);
-//        model.addAttribute("sWoodenProduct", one);
-//        model.addAttribute("woodenProduct1", woodenProductService.findProductWithImages());
-//        return "woodenProduct";
-//    }
+
+    @GetMapping("woodenProduct{id}")
+    public String showWoodenProduct(Model model, @PathVariable int id) {
+        WoodenProduct one = woodenProductService.findOne(id);
+        List<WoodenProduct> withImg = woodenProductService.findProductWithImages(id);
+        model.addAttribute("sWoodenProduct", one);
+        model.addAttribute("woodenProductImage", withImg);
+        return "woodenProductPage";
+
+    }
 
 
     public BuildMaterialService getBuildMaterialService() {

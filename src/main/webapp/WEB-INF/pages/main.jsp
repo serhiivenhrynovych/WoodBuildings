@@ -85,27 +85,27 @@
             віконних та дверних блоків, кольорові поєднання елементів фасадів, тощо.
         </div>
         <main class="main">
-            <a href="">
-                <div class="paginator">
 
-                    ${sproduct}
-                    <c:forEach items="${woodenProductsList}" var="woodenProduct">
-                        <div class="col-6">
-                            <div class="product main-border">
-                                <img class="col-6-img" src="${woodenProduct.image}" alt="img">
+            <div class="paginator">
 
-                                <div class="main-build-name">
-                                        ${woodenProduct.buildName}
-                                </div>
-                                <div class="main-price">
-                                    $${woodenProduct.buildPrice.priceSum}
-                                </div>
+                ${sproduct}
+                <c:forEach items="${woodenProductsList}" var="woodenProduct">
+                    <a href="woodenProduct${woodenProduct.id}">
+                        <div class="product main-border">
+                            <img class="col-6-img" src="${woodenProduct.image}" alt="img">
+
+                            <div class="main-build-name">
+                                    ${woodenProduct.buildName}
+                            </div>
+                            <div class="main-price">
+                                $${woodenProduct.buildPrice.priceSum}
                             </div>
                         </div>
-                    </c:forEach>
-                </div>
+                    </a>
+                </c:forEach>
+            </div>
 
-            </a>
+
         </main>
 
         <script>

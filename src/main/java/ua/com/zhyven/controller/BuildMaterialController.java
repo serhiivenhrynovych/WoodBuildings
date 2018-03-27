@@ -24,9 +24,7 @@ public class BuildMaterialController {
     @PostMapping("removeBuildMaterial")
     public String removeBuildMaterial(@RequestParam String materialType) {
         BuildMaterial byName = buildMaterialService.findByName(materialType);
-        System.out.println("deleting hhhhhhhhhhhhhhhhhhhhhhhhhhh1");
         buildMaterialService.remove(byName);
-        System.out.println("deleting hhhhhhhhhhhhhhhhhhhhhhhhhhh2");
         return "redirect:/admin";
     }
 

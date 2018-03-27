@@ -17,6 +17,6 @@ public interface WoodenProductService {
 
     List<WoodenProduct> findAllWoodenProductsWith();
 
-    List<WoodenProduct> findProductWithImages();
+    List<WoodenProduct> findProductWithImages(int id);
 
 }

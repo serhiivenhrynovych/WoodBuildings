@@ -43,7 +43,7 @@ public class WoodenProductServiceImpl implements WoodenProductService {
     }
 
     @Override
-    public List<WoodenProduct> findProductWithImages() {
-        return woodenProductDAO.findProductWithImages();
+    public List<WoodenProduct> findProductWithImages(int id) {
+        return woodenProductDAO.findProductWithImages(id);
     }
 }
