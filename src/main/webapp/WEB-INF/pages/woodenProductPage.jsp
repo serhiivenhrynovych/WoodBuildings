@@ -19,7 +19,6 @@
             <img src="${pr.images[0]}" width="500" height="500">
             <img src="${pr.images[1]}" width="500" height="500">
             <img src="${pr.images[2]}" width="500" height="500">
-            <img src="${pr.images[3]}" width="500" height="500">
     </c:forEach>
 </div>
 </body>
